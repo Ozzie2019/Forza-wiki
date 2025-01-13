@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza Horizon 5 Wiki - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        body {
+            background-color: #1b1b1b;
+            font-family: 'Roboto', sans-serif;
+            color: #d4d4dc;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('w5xr9xk9mwi1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 198, 255, 0.6), rgba(0, 0, 0, 0.8));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #00c6ff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .hero .section-buttons button {
+            padding: 12px 24px;
+            margin: 0 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: #00c6ff;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 198, 255, 0.5);
+        }
+
+        .hero .section-buttons button:hover {
+            background: #007acc;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 122, 204, 0.7);
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 60px 20px;
+            text-align: center;
+            background: #121212;
+            border-top: 2px solid #00c6ff;
+            border-bottom: 2px solid #00c6ff;
+        }
+
+        .overview h2 {
+            color: #00c6ff;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .overview p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.15rem;
+            color: #b3b3b3;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d0d0d;
+            color: #b3b3b3;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Content</h5>
+                <div class="navbar-buttons">
+                    <button onclick="window.location.href='index.html'">Home</button>
+                    <button onclick="window.location.href='cars.html'">Cars</button>
+                    <button onclick="window.location.href='maps.html'">Maps</button>
+                    <button onclick="window.location.href='tips.html'">Tips</button>
+                    <button onclick="window.location.href='updates.html'">Updates</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Forza Horizon 5 Wiki</h1>
+            <p>Your ultimate guide to cars, maps, tips, and all the latest in the exhilarating world of Forza Horizon 5.
+                Get ready to discover, drive, and dominate!</p>
+            <div class="section-buttons">
+                <button onclick="window.location.href='cars.html'">Explore Cars</button>
+                <button onclick="window.location.href='maps.html'">Check Maps</button>
+                <button onclick="window.location.href='tips.html'">Master the Game</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <main>
+        <section class="overview">
+            <h2>Get Started with Forza Horizon 5</h2>
+            <p>
+                Dive into a comprehensive world of Forza Horizon 5 where every car, every map, and every piece of advice
+                is tailored to bring you closer to mastery. Whether you're chasing the fastest cars, exploring expansive
+                maps, or seeking tips to outdrive your competition, we have you covered.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Forza Horizon 5 Wiki &copy; 2024 - Your Journey Begins Here</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        function searchRedirect(event) {
+            event.preventDefault();
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            if (query === "cars") {
+                window.location.href = 'cars.html';
+            } else if (query === "maps") {
+                window.location.href = 'maps.html';
+            } else if (query === "tips") {
+                window.location.href = 'tips.html';
+            } else if (query === "updates") {
+                window.location.href = 'updates.html';
+            } else {
+                alert("No page found for your search query.");
+            }
+        }
+    </script>
+</body>
+
+</html>
