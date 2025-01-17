@@ -169,6 +169,9 @@
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="display: none;">⬆ Back to Top</button>
+
     <!-- Footer -->
     <footer>
         <p>Forza Horizon 5 Wiki &copy; 2024 - Your Journey Begins Here</p>
@@ -178,21 +181,20 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script>
-        function searchRedirect(event) {
-            event.preventDefault();
-            const query = document.getElementById("searchBar").value.toLowerCase();
-            if (query === "cars") {
-                window.location.href = 'cars.html';
-            } else if (query === "maps") {
-                window.location.href = 'maps.html';
-            } else if (query === "tips") {
-                window.location.href = 'tips.html';
-            } else if (query === "updates") {
-                window.location.href = 'updates.html';
+        // Show or hide the back-to-top button based on scroll position
+        const backToTopButton = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
             } else {
-                alert("No page found for your search query.");
+                backToTopButton.style.display = "none";
             }
-        }
+        };
+
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
     </script>
 </body>
 

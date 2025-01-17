@@ -51,3 +51,19 @@ function searchSite() {
         }
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Find all featured cars in the gallery
+    const featuredCars = document.querySelectorAll('.featured-car');
+
+    featuredCars.forEach(car => {
+        car.addEventListener('mouseenter', () => {
+            // Add any specific interaction logic if needed on hover
+            console.log(`Hovering over car: ${car.dataset.carName}`);
+        });
+
+        car.addEventListener('mouseleave', () => {
+            // Add any specific interaction logic if needed on hover end
+            console.log(`Stopped hovering over car: ${car.dataset.carName}`);
+        });
+    });
+});

@@ -125,13 +125,33 @@
         </div>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="display: none;">⬆ Back to Top</button>
+
+    <!-- Footer -->
     <footer>
-        <p>Forza Horizon 5 Wiki &copy; 2024</p>
+        <p>Forza Horizon 5 Wiki &copy; 2024 - Your Journey Begins Here</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        // Show or hide the back-to-top button based on scroll position
+        const backToTopButton = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
 </body>
 
 </html>

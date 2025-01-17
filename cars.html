@@ -42,35 +42,25 @@
             <p class="text-center">Explore a vast collection of cars across various classes, manufacturers, and styles
                 in Forza Horizon 5.</p>
         </section>
+
         <!-- Car Gallery Section -->
         <section>
             <h4 class="text-center text-primary mt-5">Gallery of Featured Cars</h4>
-            <div class="car-gallery">
-                <div class="car-item">
+            <div class="car-gallery d-flex justify-content-center flex-wrap gap-4">
+                <button class="car-item btn btn-light" onclick="window.location.href='amvcc.html'">
                     <img src="am_valhalla.png" alt="Aston Martin Valhalla Concept Car">
                     <h5>Aston Martin Valhalla Concept Car</h5>
-                </div>
-                <div class="car-item">
+                </button>
+                <button class="car-item btn btn-light" onclick="window.location.href='amv.html'">
                     <img src="am_valkyrie.webp" alt="Aston Martin Valkyrie">
                     <h5>Aston Martin Valkyrie</h5>
-                </div>
-                <div class="car-item">
+                </button>
+                <button class="car-item btn btn-light" onclick="window.location.href='koenigsegg_one_1.html'">
                     <img src="Koenigsegg_One1.jpg" alt="Koenigsegg One:1">
                     <h5>Koenigsegg One:1</h5>
-                </div>
-                <div class="car-item">
-                    <img src="pininfarina_battista.jpg" alt="Automobili Pininfarina Battista">
-                    <h5>Pininfarina Battista</h5>
-                </div>
+                </button>
             </div>
         </section>
-        <!-- Popular Cars Section -->
-        <p></p>
-        <h4>Popular cars:</h4>
-        <div class="car-buttons">
-            <button onclick="window.location.href='amvcc.html'">Aston Martin Valhalla Concept Car</button>
-            <button onclick="window.location.href='koenigsegg_one_1.html'">Koenigsegg One:1</button>
-        </div>
         <!-- Car Categories Section -->
         <!-- A -->
         <div class="letter-section">
@@ -387,14 +377,33 @@
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" style="display: none;">⬆ Back to Top</button>
+
+    <!-- Footer -->
     <footer>
-        <p>Forza Horizon 5 Wiki &copy; 2024</p>
+        <p>Forza Horizon 5 Wiki &copy; 2024 - Your Journey Begins Here</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script>
+        // Show or hide the back-to-top button based on scroll position
+        const backToTopButton = document.getElementById("backToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
 </body>
 
 </html>
